@@ -3,36 +3,37 @@
         {
             "id": 1,
             "aliases": {
-                "1": "peppy",
-                "2": "anna"
+                "1": "Peppy",
+                "2": "Anna"
             },
             "displayName": "Alice",
             "displayPicture": "",
             "email": "alice@gmail.com",
             "phoneNumber": "12341234",
-            "username": "aliceSmith"
+            "username": "alicesmith"
         },
         {
             "id": 2,
             "aliases": {
-                "1": "ted"
+                "1": "Ted"
             },
-            "displayName": "bob",
+            "displayName": "Bob",
             "displayPicture": "",
             "email": "bob@gmail.com",
             "phoneNumber": "1423434",
-            "username": "bobTheBuilder"
+            "username": "bobthebuilder"
         },
         {
             "id": 3,
             "aliases": {
-                "3": "tyler"
+                "1": "Gordon",
+                "3": "Tyler"
             },
-            "displayName": "gordon",
+            "displayName": "Gordon",
             "displayPicture": "",
             "email": "gordon@gmail.com",
             "phoneNumber": "1624354",
-            "username": "mrGordon"
+            "username": "mrgordon"
         }
     ]    
 }
