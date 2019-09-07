@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Chat() {
+export default function ChatPage() {
   const classes = useStyles();
 
   return (
@@ -45,7 +45,7 @@ export default function Chat() {
           }
         />
       </ListItem>
-      {/* <Divider variant="inset" component="li" /> */}
+
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
           <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
@@ -67,7 +67,7 @@ export default function Chat() {
           }
         />
       </ListItem>
-      {/* <Divider variant="inset" component="li" /> */}
+      
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
           <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />

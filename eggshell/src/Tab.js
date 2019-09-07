@@ -10,7 +10,7 @@ import Box from '@material-ui/core/Box';
 import PhoneIcon from '@material-ui/icons/Phone';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import PersonPinIcon from '@material-ui/icons/PersonPin';
-import Chat from './Chat'
+import ChatTab from './ChatTab'
 import Search from './Search'
 
 function TabPanel(props) {
@@ -85,7 +85,7 @@ export default function FullWidthTabs() {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel  value={value} index={0} dir={theme.direction} >
-          <Chat/>
+          <ChatTab/>
         </TabPanel>
         <TabPanel  value={value} index={1} dir={theme.direction}>
           <Search/>
