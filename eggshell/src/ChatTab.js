@@ -35,13 +35,18 @@ export default function ChatTab() {
 
   for (let i = 0; i < 3; i++) {
 
-    if (!groupJson.groups[i].memberList.includes(1)) {
+    if (groupJson.groups[i].memberList.includes(1)) {
+        
+        let last_message = groupJson.groups[i].messages[groupJson.groups[i].messages.length - 1];
 
+        if (!last_message) continue;
         groups.push({
-        name : groupJson.groups[i].displayName,
-        image : groupJson.groups[i].displayPicture,
-        last_message: "teste",
-        last_name: "teste",
+          name : groupJson.groups[i].displayName,
+          image : groupJson.groups[i].displayPicture,
+          last_name : userJson.users[last_message.userID -1].aliases.message_k ,
+          last_message : groupJson.groups[i].messages[groupJson.groups[i].messages.length -1].text,
+          last_message_text: last_message.text,
+          last_message_id: last_message.userID,
       })
     }
   }
