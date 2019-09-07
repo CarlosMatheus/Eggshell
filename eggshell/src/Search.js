@@ -51,7 +51,7 @@ export default function PrimarySearchAppBar(props) {
 
   const [join, setJoin] = useState(0);
   const [info, setInfo] = useState(0);
-  const [searchContent, setSearch] = useState(0);
+  const [searchContent, setSearch] = useState("0");
 
   useEffect(() => {
     setJoin(props.join);
@@ -77,8 +77,10 @@ export default function PrimarySearchAppBar(props) {
   for (let i = 0; i < groups.length; i++) {
     let name = groups[i].displayName;
 
-    if (!groups[i].memberList.includes(1) && name.includes(searchContent) && searchContent !== "") {
-        let description = groups[i].description;
+    let searchLower = searchContent.toLowerCase()
+    if (!groups[i].memberList.includes(1) && name.toLowerCase().includes(searchLower) && searchContent !== "") {
+        console.log("found")
+        let description = groups[i].description;  
         let avatar = groups[i].displayPicture;
 
         rows.push(

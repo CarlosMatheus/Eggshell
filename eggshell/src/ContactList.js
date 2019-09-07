@@ -8,6 +8,7 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 
+
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
@@ -19,19 +20,19 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function Contact({i},{props})
+function Contact({i},{groups}, onClick)
 {
     const classes = useStyles();
 
     return(
     <ListItem 
     alignItems="flex-start" 
-    onClick={()=> props.onClick}>
+    onClick={()=> onClick}>
         <ListItemAvatar>
-            <Avatar alt= {props.groups[i].name} src="/static/images/avatar/1.jpg" />
+            <Avatar alt= {groups[i].name} src={groups[i].image} />
         </ListItemAvatar>
         <ListItemText
-            primary = {props.groups[i].name}
+            primary = {groups[i].name}
             secondary ={
                 <React.Fragment>
                     <Typography
@@ -40,9 +41,9 @@ function Contact({i},{props})
                         className={classes.inline}
                         color="textPrimary"
                     >
-                        {props.groups[i].last_name}
+                        {groups[i].last_name}
                     </Typography>
-                    {" — " + props.groups[i].last_message}
+                    {" — " + groups[i].last_message}
                 </React.Fragment>
             }
         />
@@ -50,27 +51,14 @@ function Contact({i},{props})
     );
 }
 
-export default function ContactList() {
+export default function ContactList(groups, onClick) {
   
     const classes = useStyles();
-    const props = {
-        groups : [
-            {
-                name: 'Animes unidos',
-                last_name: 'Carlos',
-                last_message : 'Eu tentei!'
-            },
-            {
-                name: 'LGBT',
-                last_name: 'Luiz Anonimo',
-                last_message : 'Vou morrer!'
-            }]
-    }
   const itens=[];
-  console.log(props.groups.length);
-  for (let i = 0; i<props.groups.length;i++)
+  console.log( groups.length);
+  for (let i = 0; i< groups.length;i++)
   {
-    itens.push(Contact({i},{props}));
+    itens.push(Contact({i},{groups}, onClick));
   }
 
   return (
