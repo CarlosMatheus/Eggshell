@@ -1,5 +1,5 @@
 {
-    "users": [
+    "groups": [
         {
             "id": 1,
             "creatorID": 1,
