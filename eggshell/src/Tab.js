@@ -92,7 +92,9 @@ export default function FullWidthTabs() {
           <ChatTab/>
         </TabPanel>
         <TabPanel  value={value} index={1} dir={theme.direction}>
+      <div style={{height: '885px'}}>
           <Search join="false"/>
+        </div>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
           <ConfigPage/>
