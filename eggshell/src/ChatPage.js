@@ -23,11 +23,11 @@ export default function ChatPage() {
   const names = [
     'Shemika Clevinger', 
     'Monroe Okelly', 
-    'Brandie Mudd', 
+    'Alice', 
     'Santo Lafontaine', 
     'Shemika Clevinger', 
     'Monroe Okelly', 
-    'Brandie Mudd', 
+    'Alice', 
     'Santo Lafontaine'
   ]
   const selfs = [
