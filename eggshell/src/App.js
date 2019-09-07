@@ -27,7 +27,7 @@ function App() {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <IconTabs/>
-          <Body/>
+          {/* <Body/> */}
         </Grid>
       </Grid>
     </div>

@@ -8,7 +8,6 @@ import Chat from './Chat'
 function Body() {
     return (
         <div>
-            Body
             <Chat/>
         </div>
     );
