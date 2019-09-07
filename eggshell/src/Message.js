@@ -54,7 +54,7 @@ export default function Message({name, self, message, onClick}) {
       />
       {self ? (
         <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+          <Avatar alt="Remy Sharp" src="https://picsum.photos/250" />
         </ListItemAvatar>
       ):
       (<div></div>)
