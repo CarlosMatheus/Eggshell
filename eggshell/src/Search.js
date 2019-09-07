@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
@@ -8,10 +8,8 @@ import Divider from '@material-ui/core/Divider';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
-import photo1 from './assets/1.png';
-import photo2 from './assets/2.png';
-import photo3 from './assets/3.png';
 import GroupJoin from './GroupJoin';
+import groupJson from './groups.json';
 import { StylesProvider } from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => ({
@@ -49,39 +47,48 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function PrimarySearchAppBar() {
+export default function PrimarySearchAppBar(props) {
   const classes = useStyles();
 
   const [join, setJoin] = useState(0);
   const [info, setInfo] = useState(0);
 
-  const handleClick = (id, groupName, groupDescription) => {
+  useEffect(() => {
+    setJoin(props.join);
+  }, [props])
+
+  const handleClick = (id, groupName, groupDescription, groupAvatar) => {
     setJoin(true);
-    setInfo({"id": id, "groupName": groupName, "groupDescription": groupDescription});
+    setInfo({"id": id, "groupName": groupName, "groupDescription": groupDescription, "groupAvatar": groupAvatar});
   }
 
-  if (join) {
+  if (join === true) {
       return <GroupJoin info={info}/>
   }
 
   let rows = []
-  let photos = [photo1, photo2, photo3];
 
-  for (let i = 1; i <= 3; i++) {
-    let group = "Group " + i;
-    rows.push(
-        <React.Fragment>
-        <ListItem alignItems="flex-start" onClick={(itemid, groupName, groupDescription) => handleClick(i, "Grupo " + i, "Descricao grupo " + i)}>
-            <ListItemAvatar>
-            <Avatar alt="Av" src={photos[i - 1]} />
-            </ListItemAvatar>
-            <ListItemText
-            primary={group}
-            />
-            </ListItem>
-            <Divider variant="inset" component="li" />
-        </React.Fragment>
-    );
+  for (let i = 0; i < 3; i++) {
+    if (!groupJson.groups[i].memberList.includes(1)) {
+        let name = groupJson.groups[i].displayName;
+        let description = groupJson.groups[i].description;
+        let avatar = groupJson.groups[i].displayPicture;
+
+        rows.push(
+            <React.Fragment>
+            <ListItem alignItems="flex-start" onClick={(itemid, groupName, groupDescription, groupAvatar) => 
+                handleClick(i, name, description, avatar)}>
+                <ListItemAvatar>
+                <Avatar alt="AA" src={avatar}/>
+                </ListItemAvatar>
+                <ListItemText
+                primary={name}
+                />
+                </ListItem>
+                <Divider variant="inset" component="li" />
+            </React.Fragment>
+        );
+    }
   }
 
   return (
@@ -99,37 +106,10 @@ export default function PrimarySearchAppBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
         </div>
+        
         <List className={classes.root}>
             {rows}
-
-            {/* <ListItem alignItems="flex-start" onClick={(itemid, groupName, groupDescription) => handleClick("1", "Grupo 1", "Descricao grupo 1")}>
-                <ListItemAvatar>
-                <Avatar alt="Av" src={photo1} />
-                </ListItemAvatar>
-                <ListItemText
-                primary="Grupo 1"
-                />
-            </ListItem>
-            <Divider variant="inset" component="li" />
-
-            <ListItem alignItems="flex-start" onClick={(itemid, groupName, groupDescription) => handleClick("2", "Grupo 2", "Descricao grupo 2")}>
-                <ListItemAvatar>
-                <Avatar alt="Av" src={photo2} />
-                </ListItemAvatar>
-                <ListItemText
-                primary="Grupo 2"
-                />
-            </ListItem>
-            <Divider variant="inset" component="li" />
-            <ListItem alignItems="flex-start" onClick={(itemid, groupName, groupDescription) => handleClick("3", "Grupo 3", "Descricao grupo 3")}>
-                <ListItemAvatar>
-                <Avatar alt="Av" src={photo3} />
-                </ListItemAvatar>
-                <ListItemText
-                primary="Grupo 3"
-                />
-            </ListItem> */}
-            </List>
+        </List>
       </React.Fragment>
   );
 }
