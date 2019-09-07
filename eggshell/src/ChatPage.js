@@ -24,11 +24,11 @@ export default function ChatPage() {
     'Shemika Clevinger', 
     'Monroe Okelly', 
     'Alice', 
-    'Santo Lafontaine', 
+    'Santo Lafontaine (Anonymous)', 
     'Shemika Clevinger', 
     'Monroe Okelly', 
     'Alice', 
-    'Santo Lafontaine'
+    'Santo Lafontaine (Anonymous)'
   ]
   const selfs = [
     false,
