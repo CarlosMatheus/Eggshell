@@ -55,6 +55,12 @@
             "banList": [
             ],
             "messages": [
+                {
+                    "id": 1,
+                    "text": "hi",
+                    "timestamp": 1567877215,
+                    "userID": 1
+                }
             ]
         },
         {

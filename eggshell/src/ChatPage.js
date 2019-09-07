@@ -23,20 +23,12 @@ export default function ChatPage() {
   const names = [
     'Shemika Clevinger', 
     'Monroe Okelly', 
-    'Brandie Mudd', 
+    'Alice', 
     'Santo Lafontaine', 
     'Shemika Clevinger', 
     'Monroe Okelly', 
-    'Brandie Mudd', 
-    'Santo Lafontaine', 
-    'Shemika Clevinger', 
-    'Monroe Okelly', 
-    'Brandie Mudd', 
-    'Santo Lafontaine', 
-    'Shemika Clevinger', 
-    'Monroe Okelly', 
-    'Brandie Mudd', 
-    'Santo Lafontaine', 
+    'Alice', 
+    'Santo Lafontaine'
   ]
   const selfs = [
     false,
@@ -46,33 +38,17 @@ export default function ChatPage() {
     false,
     false,
     true,
-    false,
-    false,
-    false,
-    true,
-    false,
-    false,
-    false,
-    true,
-    false,
+    false
   ]
   const messages = [
-    'Kept in sent gave feel will oh it we.',
-    'Has pleasure procured men laughing shutters nay.',
-    'Old insipidity motionless continuing law shy partiality.',
-    'Kept in sent gave feel will oh it we.',
-    'Kept in sent gave feel will oh it we.',
-    'Has pleasure procured men laughing shutters nay.',
-    'Old insipidity motionless continuing law shy partiality.',
-    'Kept in sent gave feel will oh it we.',
-    'Kept in sent gave feel will oh it we.',
-    'Has pleasure procured men laughing shutters nay.',
-    'Old insipidity motionless continuing law shy partiality.',
-    'Kept in sent gave feel will oh it we.',
-    'Kept in sent gave feel will oh it we.',
-    'Has pleasure procured men laughing shutters nay.',
-    'Old insipidity motionless continuing law shy partiality.',
-    'Kept in sent gave feel will oh it we.',
+    "hello",
+    "hey",
+    "hows it going",
+    "sup",
+    "how are you?",
+    "pretty good tbh",
+    "yeah",
+    "hahaha"
   ]
 
   for (let i = 0; i < 8; i++){
