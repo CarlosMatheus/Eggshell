@@ -11,10 +11,11 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     textAlign: 'center',
+    height: 1,
   },
   paper: {
     padding: theme.spacing(2),
-    textAlign: 'center',
+    textAlign: 'center', 
     color: theme.palette.text.secondary,
   },
 }));
@@ -24,12 +25,12 @@ function App() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item xs={12}>
+      {/* <Grid container spacing={3}>
+        <Grid item xs={12}> */}
           <IconTabs/>
           {/* <Body/> */}
-        </Grid>
-      </Grid>
+        {/* </Grid>
+      </Grid> */}
     </div>
   );
 }
