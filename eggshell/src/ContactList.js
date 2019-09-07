@@ -20,14 +20,19 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function Contact({i},{groups}, onClick)
+function handleClick(i) {
+
+}
+
+function Contact(i, groups)
 {
     const classes = useStyles();
 
+    console.log("iii: " + i);
     return(
     <ListItem 
     alignItems="flex-start" 
-    onClick={()=> onClick}>
+    onClick={() => handleClick(i)}>
         <ListItemAvatar>
             <Avatar alt= {groups[i].name} src={groups[i].image} />
         </ListItemAvatar>
@@ -51,14 +56,14 @@ function Contact({i},{groups}, onClick)
     );
 }
 
-export default function ContactList(groups, onClick) {
+export default function ContactList(props) {
   
-    const classes = useStyles();
+  const classes = useStyles();
   const itens=[];
-  console.log( groups.length);
-  for (let i = 0; i< groups.length;i++)
+  console.log("aqui" + props.groups.length);
+  for (let i = 0; i< props.groups.length;i++)
   {
-    itens.push(Contact({i},{groups}, onClick));
+    itens.push(Contact(i, props.groups));
   }
 
   return (
