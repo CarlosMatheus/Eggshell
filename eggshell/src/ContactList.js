@@ -8,6 +8,7 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 
+
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
@@ -28,7 +29,7 @@ function Contact({i},{props})
     alignItems="flex-start" 
     onClick={()=> props.onClick}>
         <ListItemAvatar>
-            <Avatar alt= {props.groups[i].name} src="/static/images/avatar/1.jpg" />
+            <Avatar alt= {props.groups[i].name} src={props.groups[i].image} />
         </ListItemAvatar>
         <ListItemText
             primary = {props.groups[i].name}
