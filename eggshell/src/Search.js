@@ -8,6 +8,12 @@ import Divider from '@material-ui/core/Divider';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
+<<<<<<< HEAD
+import photo1 from './assets/1.jpg';
+import photo2 from './assets/2.jpg';
+import photo3 from './assets/3.jpg';
+=======
+>>>>>>> bbeee548b175d2fe853c225adac2d3a669e09b99
 import GroupJoin from './GroupJoin';
 import groupJson from './groups.json';
 import { StylesProvider } from '@material-ui/styles';
