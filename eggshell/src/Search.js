@@ -8,12 +8,6 @@ import Divider from '@material-ui/core/Divider';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
-<<<<<<< HEAD
-import photo1 from './assets/1.jpg';
-import photo2 from './assets/2.jpg';
-import photo3 from './assets/3.jpg';
-=======
->>>>>>> bbeee548b175d2fe853c225adac2d3a669e09b99
 import GroupJoin from './GroupJoin';
 import groupJson from './groups.json';
 import { StylesProvider } from '@material-ui/styles';
@@ -58,6 +52,7 @@ export default function PrimarySearchAppBar(props) {
 
   const [join, setJoin] = useState(0);
   const [info, setInfo] = useState(0);
+  const [searchContent, setSearch] = useState(0);
 
   useEffect(() => {
     setJoin(props.join);
@@ -68,6 +63,11 @@ export default function PrimarySearchAppBar(props) {
     setInfo({"id": id, "groupName": groupName, "groupDescription": groupDescription, "groupAvatar": groupAvatar});
   }
 
+  const handleChange = () => {
+      console.log(document.getElementById("search").value);
+      setSearch(document.getElementById("search").value);
+  }
+
   if (join === true) {
       return <GroupJoin info={info}/>
   }
@@ -75,8 +75,9 @@ export default function PrimarySearchAppBar(props) {
   let rows = []
 
   for (let i = 0; i < 3; i++) {
-    if (!groupJson.groups[i].memberList.includes(1)) {
-        let name = groupJson.groups[i].displayName;
+    let name = groupJson.groups[i].displayName;
+
+    if (!groupJson.groups[i].memberList.includes(1) && name.includes(searchContent) && searchContent !== "") {
         let description = groupJson.groups[i].description;
         let avatar = groupJson.groups[i].displayPicture;
 
@@ -104,12 +105,14 @@ export default function PrimarySearchAppBar(props) {
               <SearchIcon />
             </div>
             <InputBase
+              id="search"
               placeholder="Search…"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
               inputProps={{ 'aria-label': 'search' }}
+              onChange={() => handleChange()}
             />
         </div>
         
