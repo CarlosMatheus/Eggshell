@@ -5,6 +5,7 @@ import IconTabs from './Tab';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import Body from './Body'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -26,6 +27,7 @@ function App() {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <IconTabs/>
+          <Body/>
         </Grid>
       </Grid>
     </div>
