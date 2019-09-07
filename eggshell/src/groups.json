@@ -5,7 +5,7 @@
             "creatorID": 1,
             "description": "lalalala",
             "displayName": "LGBTQ+ ICMC",
-            "displayPicture": "assets/1.jpg",
+            "displayPicture": "https://upload.wikimedia.org/wikipedia/commons/8/8a/LGBT_Rainbow_Flag.png",
             "memberList": [
                 1,
                 2,
@@ -35,7 +35,7 @@
             "creatorID": 14,
             "description": "",
             "displayName": "Passeata 07/09",
-            "displayPicture": "assets/2.jpg",
+            "displayPicture": "https://s2.glbimg.com/-AIyF5F6d8hTh9wKkNUaYhaa6jg=/0x0:1280x720/1600x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/5/X/3rnDMdT8O7ADQzKuKVaA/ufc-manifestacao.jfif",
             "memberList": [
                 1,
                 2
@@ -50,7 +50,7 @@
             "creatorID": 3,
             "description": "",
             "displayName": "LGBTQ+ Unicamp",
-            "displayPicture": "assets/3.jpg",
+            "displayPicture": "https://img.pngio.com/lgbt-fist-by-andybundy-png-rainbow-fist-free-transparent-png-lgbt-png-820_880.png",
             "memberList": [
                 3
             ],
