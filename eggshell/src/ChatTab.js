@@ -43,7 +43,7 @@ export default function ChatTab() {
     }
   }
 
-  if (count === 0){
+  if (count === 1){
     return (
       <ContactList groups onClick={() => setCount(!count)} />
     );

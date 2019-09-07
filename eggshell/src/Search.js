@@ -10,39 +10,22 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import GroupJoin from './GroupJoin';
 import { StylesProvider } from '@material-ui/styles';
+import TextField from '@material-ui/core/TextField';
 
 const useStyles = makeStyles(theme => ({
-  search: {
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: "#f0f0f0",
-    marginRight: theme.spacing(2),
-    marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(3),
-      width: 'auto',
-    },
-  },
-  searchIcon: {
-    width: theme.spacing(7),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
+  container: {
     display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexWrap: 'wrap',
   },
-  inputRoot: {
-    color: 'inherit',
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
   },
-  inputInput: {
-    padding: theme.spacing(1, 1, 1, 7),
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: 200,
-    }, 
+  dense: {
+    marginTop: theme.spacing(2),
+  },
+  menu: {
+    width: 200,
   },
 }));
 
@@ -103,10 +86,10 @@ export default function PrimarySearchAppBar(props) {
   return (
       <React.Fragment>
         <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
-            <InputBase
+            {/* <div className={classes.searchIcon}> */}
+              {/* <SearchIcon /> */}
+            {/* </div> */}
+            {/* <InputBase
               id="search"
               placeholder="Search…"
               classes={{
@@ -114,6 +97,16 @@ export default function PrimarySearchAppBar(props) {
                 input: classes.inputInput,
               }}
               inputProps={{ 'aria-label': 'search' }}
+              onChange={() => handleChange()}
+            /> */}
+            <TextField
+              id="search"
+              label="Search"
+              type="search"
+              className={classes.textField}
+              margin="normal"
+              // variant="outlined"
+              fullWidth
               onChange={() => handleChange()}
             />
         </div>
