@@ -20,8 +20,14 @@ const useStyles = makeStyles(theme => ({
 export default function Message({name, self, message}) {
   const classes = useStyles();
 
+  let style = {}
+  if (self) {
+    style = {display:'flex', justifyContent:'flex-end'}
+  }
+
   return (
-    <ListItem alignItems="flex-start">
+    <div style={style}>
+      <ListItem style={{maxWidth: 360}}>
       {!self ? (
         <ListItemAvatar>
           <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
@@ -54,5 +60,6 @@ export default function Message({name, self, message}) {
       (<div></div>)
       }
     </ListItem>
+    </div>
   );
 }
