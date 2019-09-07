@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function ChatTab() {
   const classes = useStyles();
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   if (count === 0){
     return (
