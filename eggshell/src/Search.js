@@ -9,7 +9,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import GroupJoin from './GroupJoin';
-import groupJson from './groups.json';
 import { StylesProvider } from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => ({
@@ -73,18 +72,19 @@ export default function PrimarySearchAppBar(props) {
   }
 
   let rows = []
+  let groups = JSON.parse(localStorage.getItem("groups")).groups;
+  console.log(groups);
+  for (let i = 0; i < groups.length; i++) {
+    let name = groups[i].displayName;
 
-  for (let i = 0; i < 3; i++) {
-    let name = groupJson.groups[i].displayName;
-
-    if (!groupJson.groups[i].memberList.includes(1) && name.includes(searchContent) && searchContent !== "") {
-        let description = groupJson.groups[i].description;
-        let avatar = groupJson.groups[i].displayPicture;
+    if (!groups[i].memberList.includes(1) && name.includes(searchContent) && searchContent !== "") {
+        let description = groups[i].description;
+        let avatar = groups[i].displayPicture;
 
         rows.push(
             <React.Fragment>
             <ListItem alignItems="flex-start" onClick={(itemid, groupName, groupDescription, groupAvatar) => 
-                handleClick(i, name, description, avatar)}>
+                handleClick(groups[i].id, name, description, avatar)}>
                 <ListItemAvatar>
                 <Avatar alt="AA" src={avatar}/>
                 </ListItemAvatar>
