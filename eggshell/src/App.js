@@ -6,6 +6,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Body from './Body'
+import groupJson from './groups.json';
+import userJson from './users.json';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -22,7 +24,8 @@ const useStyles = makeStyles(theme => ({
 
 function App() {
   const classes = useStyles();
-
+  localStorage.setItem("groups", JSON.stringify(groupJson));
+  localStorage.setItem("users", JSON.stringify(userJson));
   return (
     <div className={classes.root}>
       {/* <Grid container spacing={3}>

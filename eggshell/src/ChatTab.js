@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function ChatTab() {
   const classes = useStyles();
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(0);
 
  const groups=[]
 
@@ -44,7 +44,7 @@ export default function ChatTab() {
 
   if (count === 0){
     return (
-      <ContactList/>
+      <ContactList groups onClick()/>
     );
   }
   else {
