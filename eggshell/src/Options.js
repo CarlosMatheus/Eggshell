@@ -7,6 +7,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import InboxIcon from '@material-ui/icons/Inbox';
 import DraftsIcon from '@material-ui/icons/Drafts';
+import ReportContainer from './ReportContainer'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -29,9 +30,11 @@ export default function SimpleList() {
         <ListItem button>
           <ListItemText primary="Reply" />
         </ListItem>
-        <ListItemLink href="#simple-list">
-          <ListItemText primary="Report" />
-        </ListItemLink>
+        <ListItem button>
+            <ListItemText>
+                <ReportContainer/>
+            </ListItemText>
+        </ListItem>
       </List>
     </div>
   );

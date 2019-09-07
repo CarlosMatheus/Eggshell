@@ -57,7 +57,7 @@ export default function SimplePopover({name, self, message}) {
         }}
       >
         {
-          state == 'opened' ? (<Options></Options>) : (<div></div>)
+          state == 'opened' ? (<Options/>) : (<div></div>)
         }
       </Popover>
     </div>
