@@ -3,7 +3,7 @@ import IconTabs from './Tab';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import Chat from './Chat'
+import Chat from './ChatTab'
 
 function Body() {
     return (

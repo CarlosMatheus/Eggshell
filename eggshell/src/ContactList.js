@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Chat() {
+export default function ContactList() {
   const classes = useStyles();
 
   return (
