@@ -5,7 +5,7 @@
             "creatorID": 1,
             "description": "lalalala",
             "displayName": "LGBTQ+ ICMC",
-            "displayPicture": "",
+            "displayPicture": "assets/1.jpg",
             "memberList": [
                 1,
                 2,
@@ -35,7 +35,7 @@
             "creatorID": 14,
             "description": "",
             "displayName": "Passeata 07/09",
-            "displayPicture": "",
+            "displayPicture": "assets/2.jpg",
             "memberList": [
                 1,
                 2
@@ -50,7 +50,7 @@
             "creatorID": 3,
             "description": "",
             "displayName": "LGBTQ+ Unicamp",
-            "displayPicture": "",
+            "displayPicture": "assets/3.jpg",
             "memberList": [
                 3
             ],
