@@ -27,9 +27,9 @@ export default function GroupJoin(props) {
   const classes = useStyles();
   let photo = photo3;
 
-  if (props.info.id === "1") {
+  if (props.info.id == "1") {
     photo = photo1;
-  } else if (props.info.id === "2") {
+  } else if (props.info.id == "2") {
     photo = photo2;
   }
 

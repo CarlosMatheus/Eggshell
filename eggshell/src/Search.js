@@ -63,6 +63,27 @@ export default function PrimarySearchAppBar() {
   if (join) {
       return <GroupJoin info={info}/>
   }
+
+  let rows = []
+  let photos = [photo1, photo2, photo3];
+
+  for (let i = 1; i <= 3; i++) {
+    let group = "Group " + i;
+    rows.push(
+        <React.Fragment>
+        <ListItem alignItems="flex-start" onClick={(itemid, groupName, groupDescription) => handleClick(i, "Grupo " + i, "Descricao grupo " + i)}>
+            <ListItemAvatar>
+            <Avatar alt="Av" src={photos[i - 1]} />
+            </ListItemAvatar>
+            <ListItemText
+            primary={group}
+            />
+            </ListItem>
+            <Divider variant="inset" component="li" />
+        </React.Fragment>
+    );
+  }
+
   return (
       <React.Fragment>
         <div className={classes.search}>
@@ -79,7 +100,9 @@ export default function PrimarySearchAppBar() {
             />
         </div>
         <List className={classes.root}>
-            <ListItem alignItems="flex-start" onClick={(itemid, groupName, groupDescription) => handleClick("1", "Grupo 1", "Descricao grupo 1")}>
+            {rows}
+
+            {/* <ListItem alignItems="flex-start" onClick={(itemid, groupName, groupDescription) => handleClick("1", "Grupo 1", "Descricao grupo 1")}>
                 <ListItemAvatar>
                 <Avatar alt="Av" src={photo1} />
                 </ListItemAvatar>
@@ -105,7 +128,7 @@ export default function PrimarySearchAppBar() {
                 <ListItemText
                 primary="Grupo 3"
                 />
-            </ListItem>
+            </ListItem> */}
             </List>
       </React.Fragment>
   );
