@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -25,11 +25,14 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function ChatTab() {
+export default function ChatTab(props) {
 
   console.log("char tab");
   const [count, setCount] = useState(0);
 
+  useEffect(() => {
+    setCount(props.count);
+  }, [props])
  const groups=[]
 
 
@@ -51,13 +54,13 @@ export default function ChatTab() {
     }
   }
 
+  if (count == 0) {
     return (
       <ContactList groups={groups} onClick={() => setCount(!count)} />
     );
-
-  // else {
-  //   return (
-  //     <ChatPage/>
-  //   );
-  // }
+  } else {
+    return (
+      <ChatPage/>
+    );
+  }
 }

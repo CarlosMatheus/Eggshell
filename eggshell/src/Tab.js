@@ -90,7 +90,7 @@ export default function FullWidthTabs() {
       >
         <TabPanel  value={value} index={0} dir={theme.direction} >
             <div style={{height: '964px'}}>
-                <ChatTab/>
+                <ChatTab count="0"/>
             </div>
         </TabPanel>
         <TabPanel  value={value} index={1} dir={theme.direction}>

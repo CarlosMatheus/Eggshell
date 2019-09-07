@@ -7,6 +7,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
+import ChatPage from './ChatPage';
 
 
 const useStyles = makeStyles(theme => ({
@@ -21,18 +22,19 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function handleClick(i) {
-
+  return (
+    <ChatPage/>
+  );
 }
 
-function Contact(i, groups)
+function Contact(i, groups, onClick)
 {
     const classes = useStyles();
 
-    console.log("iii: " + i);
     return(
     <ListItem 
     alignItems="flex-start" 
-    onClick={() => handleClick(i)}>
+    onClick={onClick}>
         <ListItemAvatar>
             <Avatar alt= {groups[i].name} src={groups[i].image} />
         </ListItemAvatar>
@@ -60,10 +62,10 @@ export default function ContactList(props) {
   
   const classes = useStyles();
   const itens=[];
-  console.log("aqui" + props.groups.length);
+
   for (let i = 0; i< props.groups.length;i++)
   {
-    itens.push(Contact(i, props.groups));
+    itens.push(Contact(i, props.groups, props.onClick));
   }
 
   return (
