@@ -12,6 +12,7 @@ import photo1 from './assets/1.png';
 import photo2 from './assets/2.png';
 import photo3 from './assets/3.png';
 import GroupJoin from './GroupJoin';
+import groupJson from './groups.json';
 import { StylesProvider } from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => ({
@@ -67,21 +68,29 @@ export default function PrimarySearchAppBar() {
   let rows = []
   let photos = [photo1, photo2, photo3];
 
-  for (let i = 1; i <= 3; i++) {
-    let group = "Group " + i;
-    rows.push(
-        <React.Fragment>
-        <ListItem alignItems="flex-start" onClick={(itemid, groupName, groupDescription) => handleClick(i, "Grupo " + i, "Descricao grupo " + i)}>
-            <ListItemAvatar>
-            <Avatar alt="Av" src={photos[i - 1]} />
-            </ListItemAvatar>
-            <ListItemText
-            primary={group}
-            />
-            </ListItem>
-            <Divider variant="inset" component="li" />
-        </React.Fragment>
-    );
+  console.log(groupJson);
+
+  for (let i = 0; i < 3; i++) {
+
+    if (groupJson.groups[i].memberList.includes(1)) {
+        let name = groupJson.groups[i].displayName;
+        let description = groupJson.groups[i].description;
+
+        rows.push(
+            <React.Fragment>
+            <ListItem alignItems="flex-start" onClick={(itemid, groupName, groupDescription) => 
+                handleClick(i, name, description )}>
+                <ListItemAvatar>
+                <Avatar alt="Av" src={photos[i]} />
+                </ListItemAvatar>
+                <ListItemText
+                primary={name}
+                />
+                </ListItem>
+                <Divider variant="inset" component="li" />
+            </React.Fragment>
+        );
+    }
   }
 
   return (
