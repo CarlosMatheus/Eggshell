@@ -89,15 +89,19 @@ export default function FullWidthTabs() {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel  value={value} index={0} dir={theme.direction} >
-          <ChatTab/>
+            <div style={{height: '964px'}}>
+                <ChatTab/>
+            </div>
         </TabPanel>
         <TabPanel  value={value} index={1} dir={theme.direction}>
-      <div style={{height: '885px'}}>
-          <Search join="false"/>
-        </div>
+            <div style={{height: '964px'}}>
+                <Search join="false"/>
+            </div>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          <ConfigPage/>
+            <div style={{height: '964px'}}>
+                <ConfigPage/>
+            </div>
         </TabPanel>
       </SwipeableViews>
     </div>
