@@ -12,6 +12,7 @@ import photo1 from './assets/1.png';
 import photo2 from './assets/2.png';
 import photo3 from './assets/3.png';
 import GroupJoin from './GroupJoin';
+import { StylesProvider } from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => ({
   search: {
@@ -52,13 +53,15 @@ export default function PrimarySearchAppBar() {
   const classes = useStyles();
 
   const [join, setJoin] = useState(0);
+  const [info, setInfo] = useState(0);
 
-  const handleClick = (id) => {
+  const handleClick = (id, groupName, groupDescription) => {
     setJoin(true);
+    setInfo({"id": id, "groupName": groupName, "groupDescription": groupDescription});
   }
 
   if (join) {
-      return <GroupJoin/>
+      return <GroupJoin info={info}/>
   }
   return (
       <React.Fragment>
@@ -76,7 +79,7 @@ export default function PrimarySearchAppBar() {
             />
         </div>
         <List className={classes.root}>
-            <ListItem alignItems="flex-start" onClick={(itemid) => handleClick("1")}>
+            <ListItem alignItems="flex-start" onClick={(itemid, groupName, groupDescription) => handleClick("1", "Grupo 1", "Descricao grupo 1")}>
                 <ListItemAvatar>
                 <Avatar alt="Av" src={photo1} />
                 </ListItemAvatar>
@@ -86,7 +89,7 @@ export default function PrimarySearchAppBar() {
             </ListItem>
             <Divider variant="inset" component="li" />
 
-            <ListItem alignItems="flex-start" onClick={(itemid) => handleClick("2")}>
+            <ListItem alignItems="flex-start" onClick={(itemid, groupName, groupDescription) => handleClick("2", "Grupo 2", "Descricao grupo 2")}>
                 <ListItemAvatar>
                 <Avatar alt="Av" src={photo2} />
                 </ListItemAvatar>
@@ -95,7 +98,7 @@ export default function PrimarySearchAppBar() {
                 />
             </ListItem>
             <Divider variant="inset" component="li" />
-            <ListItem alignItems="flex-start" onClick={(itemid) => handleClick("3")}>
+            <ListItem alignItems="flex-start" onClick={(itemid, groupName, groupDescription) => handleClick("3", "Grupo 3", "Descricao grupo 3")}>
                 <ListItemAvatar>
                 <Avatar alt="Av" src={photo3} />
                 </ListItemAvatar>
