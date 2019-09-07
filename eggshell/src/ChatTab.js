@@ -33,14 +33,14 @@ export default function ChatTab() {
   const [count, setCount] = useState(1);
 
   const groups=[]
-  
+
   for (let i = 0; i < 3; i++) {
     if (!groupJson.groups[i].memberList.includes(1)) {
         groups.push(
         name = groupJson.groups[i].displayName,
         image= groupJson.groups[i].displayPicture,
-        last_name=userJson.user[{groupJson.groups[i].messages[groupJson.groups[i].messages.length} -1].userID].alias.{groupJson.groups[i].id}
-        last_message=groupJson.groups[i].messages[groupJson.groups[i].messages.length -1].text
+        last_name=userJson.user[groupJson.groups[i].messages[groupJson.groups[i].messages.length  -1].userID].alias.{groupJson.groups[i].id},
+        last_message = groupJson.groups[i].messages[groupJson.groups[i].messages.length -1].text,
     }
   }
 
