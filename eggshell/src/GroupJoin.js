@@ -1,9 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
-import photo1 from './assets/1.png';
-import photo2 from './assets/2.png';
-import photo3 from './assets/3.png';
+import photo1 from './assets/1.jpg';
+import photo2 from './assets/2.jpg';
+import photo3 from './assets/3.jpg';
 import { flexbox } from '@material-ui/system';
 import Button from '@material-ui/core/Button';
 
