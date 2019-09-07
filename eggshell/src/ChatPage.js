@@ -81,7 +81,6 @@ export default function ChatPage() {
       self:selfs[i], 
       message:messages[i],
     }
-    // items.push(Message(props))
     items.push(MessageContainer(props))
   }
 

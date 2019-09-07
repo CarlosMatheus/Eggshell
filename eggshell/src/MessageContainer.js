@@ -4,6 +4,7 @@ import Popover from '@material-ui/core/Popover';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Message from './Message'
+import Options from './Options'
 
 const useStyles = makeStyles(theme => ({
   typography: {
@@ -56,7 +57,7 @@ export default function SimplePopover({name, self, message}) {
         }}
       >
         {
-          state == 'opened' ? (<Typography className={classes.typography}>The content of the Popover.</Typography>) : (<div></div>)
+          state == 'opened' ? (<Options></Options>) : (<div></div>)
         }
       </Popover>
     </div>
