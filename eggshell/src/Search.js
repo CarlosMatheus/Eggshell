@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
@@ -50,18 +50,22 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function PrimarySearchAppBar() {
+export default function PrimarySearchAppBar(props) {
   const classes = useStyles();
 
   const [join, setJoin] = useState(0);
   const [info, setInfo] = useState(0);
+
+  useEffect(() => {
+    setJoin(props.join);
+  }, [props])
 
   const handleClick = (id, groupName, groupDescription) => {
     setJoin(true);
     setInfo({"id": id, "groupName": groupName, "groupDescription": groupDescription});
   }
 
-  if (join) {
+  if (join === true) {
       return <GroupJoin info={info}/>
   }
 
