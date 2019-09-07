@@ -3,36 +3,37 @@
         {
             "id": 1,
             "aliases": {
-                "1": "peppy",
-                "2": "anna"
+                "1": "Peppy",
+                "2": "Anna"
             },
             "displayName": "Alice",
-            "displayPicture": "",
+            "displayPicture": "https://scontent.xx.fbcdn.net/v/t1.0-9/18275112_855285901278863_7942431833144227609_n.jpg?_nc_cat=109&_nc_oc=AQlk6sa7x8qmh0rAY6vcICNw2o2u0NTqcf57hqPVVRfEu9OnAat49ZSHXtjaxTHeoX9SrZ5fLJIwexLh_VNF4n9-&_nc_ht=scontent.xx&oh=7c5d279d6a49f900fda35048feb141d7&oe=5DF6D259",
             "email": "alice@gmail.com",
-            "phoneNumber": "12341234",
-            "username": "aliceSmith"
+            "phoneNumber": "(54) 4321 9432",
+            "username": "alicesmith"
         },
         {
             "id": 2,
             "aliases": {
-                "1": "ted"
+                "1": "Ted"
             },
-            "displayName": "bob",
+            "displayName": "Bob",
             "displayPicture": "",
             "email": "bob@gmail.com",
             "phoneNumber": "1423434",
-            "username": "bobTheBuilder"
+            "username": "bobthebuilder"
         },
         {
             "id": 3,
             "aliases": {
-                "3": "tyler"
+                "1": "Gordon",
+                "3": "Tyler"
             },
-            "displayName": "gordon",
+            "displayName": "Gordon",
             "displayPicture": "",
             "email": "gordon@gmail.com",
             "phoneNumber": "1624354",
-            "username": "mrGordon"
+            "username": "mrgordon"
         }
     ]    
 }

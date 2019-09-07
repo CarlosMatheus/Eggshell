@@ -15,6 +15,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ChatTab from './ChatTab'
 import Search from './Search'
+import ConfigPage from './ConfigPage';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -94,7 +95,7 @@ export default function FullWidthTabs() {
           <Search join="false"/>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          Config Page
+          <ConfigPage/>
         </TabPanel>
       </SwipeableViews>
     </div>

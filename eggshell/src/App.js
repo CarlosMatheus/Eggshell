@@ -3,6 +3,11 @@ import IconTabs from './Tab';
 import { makeStyles } from '@material-ui/core/styles';
 import { useTheme, createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import Body from './Body'
+import groupJson from './groups.json';
+import userJson from './users.json';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -50,7 +55,8 @@ function WithTheme() {
 
 function App() {
   const classes = useStyles();
-
+  localStorage.setItem("groups", JSON.stringify(groupJson));
+  localStorage.setItem("users", JSON.stringify(userJson));
   return (
     <div className={classes.root} >
       <ThemeProvider theme={theme}>
