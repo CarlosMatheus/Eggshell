@@ -14,17 +14,6 @@ import { string } from 'prop-types';
 var groupJson = JSON.parse(localStorage.getItem("groups"));
 var userJson= JSON.parse(localStorage.getItem("users"));
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: '100%',
-    height: '100%',
-    backgroundColor: theme.palette.background.paper,
-  },
-  inline: {
-    display: 'inline',
-  },
-}));
-
 export default function ChatTab(props) {
 
   console.log("char tab");
@@ -36,7 +25,7 @@ export default function ChatTab(props) {
  const groups=[]
 
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < groupJson.groups.length; i++) {
 
     if (groupJson.groups[i].memberList.includes(1)) {
         
