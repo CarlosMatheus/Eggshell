@@ -1,8 +1,8 @@
 import React from 'react';
-// import logo from './logo.svg';
-// import './App.css';
 import IconTabs from './Tab';
 import { makeStyles } from '@material-ui/core/styles';
+import { useTheme, createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Body from './Body'
@@ -22,18 +22,46 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+const theme = createMuiTheme({
+  palette: {
+    type: 'dark', // Switching the dark mode on is a single property value change.
+  },
+});
+
+function WithTheme() {
+  const theme = useTheme();
+  const primaryText = theme.palette.text.primary;
+  const primaryColor = theme.palette.primary.main;
+
+  const styles = {
+    primaryText: {
+      backgroundColor: theme.palette.background.default,
+      padding: theme.spacing(1, 2),
+      color: primaryText,
+    },
+    primaryColor: {
+      backgroundColor: primaryColor,
+      padding: theme.spacing(1, 2),
+      color: theme.palette.common.white,
+    },
+  };
+
+  return (
+    <div style={{ width: 300 }}>
+      <IconTabs theme={theme}/>
+    </div>
+  );
+}
+
 function App() {
   const classes = useStyles();
   localStorage.setItem("groups", JSON.stringify(groupJson));
   localStorage.setItem("users", JSON.stringify(userJson));
   return (
-    <div className={classes.root}>
-      {/* <Grid container spacing={3}>
-        <Grid item xs={12}> */}
-          <IconTabs/>
-          {/* <Body/> */}
-        {/* </Grid>
-      </Grid> */}
+    <div className={classes.root} >
+      <ThemeProvider theme={theme}>
+        <WithTheme />
+      </ThemeProvider>
     </div>
   );
 }

@@ -7,10 +7,11 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import InboxIcon from '@material-ui/icons/Inbox';
 import DraftsIcon from '@material-ui/icons/Drafts';
+import ReportContainer from './ReportContainer'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: '100px',
+    width: '120px',
     maxWidth: 360,
     backgroundColor: theme.palette.background.paper,
   },
@@ -27,11 +28,13 @@ export default function SimpleList() {
     <div className={classes.root}>
       <List component="nav" aria-label="secondary mailbox folders">
         <ListItem button>
-          <ListItemText primary="Trash" />
+          <ListItemText primary="Reply" />
         </ListItem>
-        <ListItemLink href="#simple-list">
-          <ListItemText primary="Spam" />
-        </ListItemLink>
+        <ListItem button>
+            <ListItemText>
+                <ReportContainer/>
+            </ListItemText>
+        </ListItem>
       </List>
     </div>
   );

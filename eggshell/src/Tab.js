@@ -10,6 +10,9 @@ import Box from '@material-ui/core/Box';
 import PhoneIcon from '@material-ui/icons/Phone';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import PersonPinIcon from '@material-ui/icons/PersonPin';
+import ForumIcon from '@material-ui/icons/Forum';
+import SearchIcon from '@material-ui/icons/Search';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ChatTab from './ChatTab'
 import Search from './Search'
 import ConfigPage from './ConfigPage';
@@ -75,9 +78,9 @@ export default function FullWidthTabs() {
           variant="fullWidth"
           aria-label="full width tabs example"
         >
-          <Tab icon={<PhoneIcon />} label="Item One" {...a11yProps(0)} />
-          <Tab icon={<FavoriteIcon />} label="Item Two" {...a11yProps(1)} />
-          <Tab icon={<PersonPinIcon />} label="Item Three" {...a11yProps(2)} />
+          <Tab icon={<ForumIcon />} label="Groups" {...a11yProps(0)} />
+          <Tab icon={<SearchIcon />} label="Find Group" {...a11yProps(1)} />
+          <Tab icon={<AccountCircleIcon />} label="Account" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
       <SwipeableViews
