@@ -22,6 +22,7 @@ export default function SimplePopover({name, self, message}) {
     console.log('click');
     setAnchorEl(event.currentTarget);
     setState('opened');
+    setTimeout(function() { handleClose(); }, 3500);
   }
 
   function handleClose() {
