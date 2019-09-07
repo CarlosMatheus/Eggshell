@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Message({name, self, message}) {
+export default function Message({name, self, message, onClick}) {
   const classes = useStyles();
 
   let style = {}
@@ -26,7 +26,7 @@ export default function Message({name, self, message}) {
   }
 
   return (
-    <div style={style}>
+    <div style={style} onClick={onClick}>
       <ListItem style={{maxWidth: 360}}>
       {!self ? (
         <ListItemAvatar>

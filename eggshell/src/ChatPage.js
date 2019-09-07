@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import Message from './Message'
+import MessageContainer from './MessageContainer'
 import MessageInput from './MessageInput'
 
 const useStyles = makeStyles(theme => ({
@@ -80,7 +81,8 @@ export default function ChatPage() {
       self:selfs[i], 
       message:messages[i],
     }
-    items.push(Message(props))
+    // items.push(Message(props))
+    items.push(MessageContainer(props))
   }
 
   return (
