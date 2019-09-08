@@ -1,0 +1,107 @@
+{
+    "groups": [
+        {
+            "id": 1,
+            "creatorID": 1,
+            "description": "lalalala",
+            "displayName": "LGBTQ+ ICMC",
+            "displayPicture": "https://upload.wikimedia.org/wikipedia/commons/8/8a/LGBT_Rainbow_Flag.png",
+            "memberList": [
+                1,
+                2,
+                3
+            ],
+            "banList": [
+                14,
+                15
+            ],
+            "messages": [
+                {
+                    "id": 1,
+                    "text": "aaa",
+                    "timestamp": 1567877269,
+                    "userID": 3
+                },
+                {
+                    "id": 2,
+                    "text": "hello",
+                    "timestamp": 1567877273,
+                    "userID": 3
+                },
+                {
+                    "id": 3,
+                    "text": "any1 there?",
+                    "timestamp": 1567877276,
+                    "userID": 3
+                },
+                {
+                    "id": 4,
+                    "text": "hey",
+                    "timestamp": 1567877285,
+                    "userID": 2
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "creatorID": 14,
+            "description": "alo alo alo",
+            "displayName": "Passeata 07/09",
+            "displayPicture": "https://s2.glbimg.com/-AIyF5F6d8hTh9wKkNUaYhaa6jg=/0x0:1280x720/1600x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/5/X/3rnDMdT8O7ADQzKuKVaA/ufc-manifestacao.jfif",
+            "memberList": [
+                1,
+                2
+            ],
+            "banList": [
+            ],
+            "messages": [
+                {
+                    "id": 1,
+                    "text": "hi",
+                    "timestamp": 1567877215,
+                    "userID": 1
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "creatorID": 3,
+            "description": "unicaaaamp",
+            "displayName": "LGBTQ+ Unicamp",
+            "displayPicture": "https://img.pngio.com/lgbt-fist-by-andybundy-png-rainbow-fist-free-transparent-png-lgbt-png-820_880.png",
+            "memberList": [
+                3
+            ],
+            "banList": [
+            ],
+            "messages": [
+                {
+                    "id": 3,
+                    "text": "hiii",
+                    "timestamp": 1567877231,
+                    "userID": 3
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "creatorID": 3,
+            "description": "Grupo do ITA",
+            "displayName": "LGBTQ+ ITA",
+            "displayPicture": "https://www.pressandjournal.co.uk/wp-content/uploads/sites/2/2018/05/52645339-559x372.jpg",
+            "memberList": [
+                3
+            ],
+            "banList": [
+            ],
+            "messages": [
+                {
+                    "id": 3,
+                    "text": "hi",
+                    "timestamp": 1567877215,
+                    "userID": 3
+                }
+            ]
+        }
+    ]    
+}
