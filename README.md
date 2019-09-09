@@ -1,8 +1,33 @@
 # Eggshell
 
+## About
+
+Chat app that lets you create locality-focused public groups, directed on bringing together people from minority groups (like LGBT) in a particular region who want to talk about the cause but without having to expose their real identity.
+
+In these conversation groups, each person chooses whether to use their real identity or use a pseudonym. All people who are anonymous within the group are marked as anonymous. Thus, it is a way to bring together people with common interests, but who have some fear related to disclosing their identity in this group.
+
+In the groups, there is a democratic ban system in which inappropriate messages can be flagged, and if a percentage of the group reports the message to that person's account, they are banned from that group.
+
+Project developed in 9 hours for the Facebook Hack-a-project Hackathon 2019 at Facebook São Paulo by:
+
+* **Carlos Matheus** - [CarlosMatheus](https://github.com/CarlosMatheus)
+* **Gabriel Kanegae** - [KanegaeGabriel](https://github.com/KanegaeGabriel)
+* **Carolina Arenas** - [arenasoy](https://github.com/arenasoy)
+* **Sophia Estrela** - [sophia-estrela](https://github.com/sophia-estrela)
+
+### About the Hack-a-project
+
+![Hackathon](https://media.giphy.com/media/KxtQp1oNYWydPQPzls/giphy.gif)
+
+Hack-a-project is a 4-days tech mentoring program, designed for penultimate year students that are interested in learning more about Solutions Engineering at Facebook. Selected students come to the Facebook office for 4 days to focus on understanding the whole development cycle inside the Solutions Engineering team, and build their own project in groups.
+
+Each session consists of a talk and practical applications with group mentoring support from Software and Solutions Engineers.  Besides, it is shared tips on "how to crush your coding interview" and also do a mock interview, where feedback be provided.
+
+## Usage
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
