@@ -2,26 +2,26 @@
 
 ## About
 
-Chat app that lets you create locality-focused public groups, directed on bringing together people from minority groups (like LGBT) in a particular region who want to talk about the cause but without having to expose their real identity.
+Chat app that lets you create locality-focused public groups, directed on bringing together people from minority groups (e.g. LGBTQ+) in a particular region who want to talk about the cause but without having to expose their real identity.
 
-In these conversation groups, each person chooses whether to use their real identity or use a pseudonym. All people who are anonymous within the group are marked as anonymous. Thus, it is a way to bring together people with common interests, but who have some fear related to disclosing their identity in this group.
+In these conversation groups, each person chooses whether to use their real identity or use a pseudonym. All people who are anonymous within the group are marked as such. Thus, it is a way to bring together people with common interests, but who have some fear related to disclosing their identity in this group.
 
 In the groups, there is a democratic ban system in which inappropriate messages can be flagged, and if a percentage of the group reports the message to that person's account, they are banned from that group.
 
-Project developed in 9 hours for the Facebook Hack-a-project Hackathon 2019 at Facebook São Paulo by:
+Project developed in 9 hours for the Facebook Hack-a-Project Hackathon 2019 at Facebook São Paulo by:
 
 * **Carlos Matheus** - [CarlosMatheus](https://github.com/CarlosMatheus)
 * **Gabriel Kanegae** - [KanegaeGabriel](https://github.com/KanegaeGabriel)
 * **Carolina Arenas** - [arenasoy](https://github.com/arenasoy)
 * **Sophia Estrela** - [sophia-estrela](https://github.com/sophia-estrela)
 
-### About the Hack-a-project
+### About Hack-a-Project
 
 ![Hackathon](https://media.giphy.com/media/KxtQp1oNYWydPQPzls/giphy.gif)
 
-Hack-a-project is a 4-days tech mentoring program, designed for penultimate year students that are interested in learning more about Solutions Engineering at Facebook. Selected students come to the Facebook office for 4 days to focus on understanding the whole development cycle inside the Solutions Engineering team, and build their own project in groups.
+Hack-a-Project is a 4-day tech mentoring program, designed for penultimate year students that are interested in learning more about Solutions Engineering roles at Facebook. Selected students come to the Facebook office for 4 days to focus on understanding the whole development cycle inside the Solutions Engineering team, and build their own project in groups.
 
-Each session consists of a talk and practical applications with group mentoring support from Software and Solutions Engineers.  Besides, it is shared tips on "how to crush your coding interview" and also do a mock interview, where feedback be provided.
+Each session consists of a talk and practical applications with group mentoring support from Software and Solutions Engineers. There are also tips on technical interviews, as well as a mock interview with feedback.
 
 ## Usage
 
